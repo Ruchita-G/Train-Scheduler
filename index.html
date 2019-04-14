@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Train Scheduler</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container #bdbdbd grey lighten-1">
+        <div class="card-panel #ef5350 red lighten-1" style="text-align: center">
+            <h1>All Aboard</h1>
+            <p>Train will be leaving soon!</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-panel #ef9a9a red lighten-3">
+                        <h6>Current Train Schedule</h6>
+                    </div>
+                    <div class="card-content #e0e0e0 grey lighten-2" id="trainAdded">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency(mins)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-panel #ffebee red lighten-5">
+                            <h6>Add Train</h6>
+                        </div>
+                        <div class="card-content #eeeeee grey lighten-3">
+                            <form class="col-12">
+                                <div class="row">
+                                    <div class="input-field col-12">
+                                        <input id="trainName-input" type="text" class="validate">
+                                        <label for="trainName-input" class="active">Train Name</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col-12">
+                                            <input id="destination-input" type="text" class="validate">
+                                            <label for="destination-input" class="active">Destination</label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col-12">
+                                                <input id="time-input" type="text" class="timepicker">
+                                                <label for="time-input" class="active">First Train Time:</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="input-field col-12">
+                                                <input id="frequency-input" type="text" class="validate">
+                                                <label for="frequency-input" class="active">Frequency</label>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <button id="addTrainBtn"
+                                                class="btn waves-effect waves-light #212121 #b71c1c red darken-4 btn-large"
+                                                type="submit" name="action">Submit
+                                                <i class="material-icons right"></i>
+                                            </button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+        <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
+        <!-- JavaScript -->
+        <script src="app.js"></script>
+</body>
+
+</html>
