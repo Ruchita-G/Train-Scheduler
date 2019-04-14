@@ -32,7 +32,7 @@
                         <h6>Current Train Schedule</h6>
                     </div>
                     <div class="card-content #e0e0e0 grey lighten-2" id="trainAdded">
-                        <table>
+                        <table id="trainTable">
                             <thead>
                                 <tr>
                                     <th>Train Name</th>
@@ -75,7 +75,7 @@
                                         <div class="row">
                                             <div class="input-field col-12">
                                                 <input id="frequency-input" type="text" class="validate">
-                                                <label for="frequency-input" class="active">Frequency</label>
+                                                <label for="frequency-input" class="active">Frequency(mins)</label>
                                             </div>
                                             <br>
                                             <br>
@@ -92,11 +92,23 @@
             </div>
         </div>
 
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
 
         <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCSCxSjFH9sfTrp0pND6JqW6mIXBqUUu_Q",
+                authDomain: "first-database-b7dec.firebaseapp.com",
+                databaseURL: "https://first-database-b7dec.firebaseio.com",
+                projectId: "first-database-b7dec",
+                storageBucket: "first-database-b7dec.appspot.com",
+                messagingSenderId: "785783656013"
+            };
+            firebase.initializeApp(config);
+        </script>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
         <!-- JavaScript -->
         <script src="app.js"></script>
