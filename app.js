@@ -9,15 +9,28 @@ var database = firebase.database();
 $("#addTrainBtn").on("click", function (event) {
     event.preventDefault();
 
+    if (!$("#trainName-input").val().trim()) {
+        alert("Add Train Name")
+        return;
+    };
+    if (!$("#destination-input").val().trim()) {
+        alert("Add Destination")
+        return;
+    };
+    if (!$("#time-input").val().trim()) {
+        alert("Add Train Time")
+        return;
+    };
+    if (!$("#frequency-input").val().trim()) {
+        alert("Add frequency")
+        return;
+    };
+
     var trainName = $("#trainName-input").val().trim();
     var destination = $("#destination-input").val().trim();
-
     var firstTime = moment($("#time-input").val().trim(), "HH:mm").subtract(1, "years").format("X");
-
     var frequency = $("#frequency-input").val().trim();
-
     var currentTime = moment();
-    console.log("CURRENT TIME: " + moment(currentTime).format("HH:mm"));
 
     console.log(trainName);
     console.log(destination);
@@ -87,4 +100,3 @@ database.ref().on("child_added", function (childSnapshot) {
 }, function (errorObject) {
     console.log("The read failed: " + errorObject.code);
 });
-
